@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Heading, Text, Button, Stack, Flex, Image, Grid, GridItem, Icon } from "@chakra-ui/react";
 import { FaCheck } from "react-icons/fa";
 
 const Index = () => {
+  const [activeTab, setActiveTab] = useState("Security");
+
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+  };
   return (
     <Box>
       {/* Hero Section */}
@@ -79,41 +84,55 @@ const Index = () => {
               <Text>Foster team collaboration with real-time communication, shared workspaces, and seamless file sharing.</Text>
             </GridItem>
           </Grid>
-        </Box>
-      </Box>
-
-      {/* Testimonials Section */}
-      <Box bg="gray.100" py={20}>
-        <Box maxW="7xl" mx="auto" px={4}>
-          <Heading as="h2" size="xl" mb={12} textAlign="center">
-            What Our Customers Say
-          </Heading>
-          <Stack spacing={8}>
-            <Box bg="white" p={8} borderRadius="lg" boxShadow="md">
-              <Text fontSize="xl" mb={4}>
-                "The enterprise software has revolutionized the way our teams work together. It's intuitive, reliable, and has significantly improved our productivity."
-              </Text>
-              <Text fontWeight="bold">John Doe, CEO</Text>
-            </Box>
-            <Box bg="white" p={8} borderRadius="lg" boxShadow="md">
-              <Text fontSize="xl" mb={4}>
-                "We've been using this software across our organization, and it has streamlined our processes and enhanced collaboration. It's a game-changer!"
-              </Text>
-              <Text fontWeight="bold">Jane Smith, CTO</Text>
-            </Box>
-          </Stack>
-        </Box>
-      </Box>
-
-      {/* CTA Section */}
-      <Box py={20}>
-        <Box maxW="7xl" mx="auto" px={4} textAlign="center">
-          <Heading as="h2" size="xl" mb={8}>
-            Ready to Transform Your Enterprise?
-          </Heading>
-          <Button colorScheme="blue" size="lg">
-            Get Started Today
-          </Button>
+          <Flex justifyContent="center" mt={8}>
+            <Button mr={4} colorScheme="blue" onClick={() => handleTabClick("Security")}>
+              Security
+            </Button>
+            <Button mr={4} colorScheme="blue" onClick={() => handleTabClick("Scale")}>
+              Scale
+            </Button>
+            <Button mr={4} colorScheme="blue" onClick={() => handleTabClick("Performance")}>
+              Performance
+            </Button>
+            <Button colorScheme="blue" onClick={() => handleTabClick("Compliance")}>
+              Compliance
+            </Button>
+          </Flex>
+          <Box mt={8}>
+            {}
+            {activeTab === "Security" && (
+              <Box>
+                <Heading as="h3" size="lg" mb={4}>
+                  Security
+                </Heading>
+                <Text>Our enterprise software prioritizes the security of your data with robust encryption, access controls, and regular security audits. We ensure that your sensitive information remains protected at all times.</Text>
+              </Box>
+            )}
+            {activeTab === "Scale" && (
+              <Box>
+                <Heading as="h3" size="lg" mb={4}>
+                  Scale
+                </Heading>
+                <Text>Our software is designed to scale seamlessly with your growing enterprise needs. Whether you have a small team or a large organization, our solution can handle the increasing workload and user base without compromising performance.</Text>
+              </Box>
+            )}
+            {activeTab === "Performance" && (
+              <Box>
+                <Heading as="h3" size="lg" mb={4}>
+                  Performance
+                </Heading>
+                <Text>We understand the importance of high-performance software in enterprise environments. Our solution is optimized for speed, efficiency, and reliability, ensuring that your teams can work productively without any delays or interruptions.</Text>
+              </Box>
+            )}
+            {activeTab === "Compliance" && (
+              <Box>
+                <Heading as="h3" size="lg" mb={4}>
+                  Compliance
+                </Heading>
+                <Text>Compliance with industry regulations and standards is a top priority for enterprises. Our software is built with compliance in mind, adhering to relevant guidelines and best practices to help you meet your compliance requirements effortlessly.</Text>
+              </Box>
+            )}
+          </Box>
         </Box>
       </Box>
     </Box>
