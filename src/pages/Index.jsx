@@ -61,29 +61,7 @@ const Index = () => {
           <Heading as="h2" size="xl" mb={12} textAlign="center">
             Key Features
           </Heading>
-          <Grid templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} gap={8}>
-            <GridItem>
-              <Icon as={FaCheck} color="green.500" boxSize={8} mb={4} />
-              <Heading as="h3" size="lg" mb={2}>
-                Scalability
-              </Heading>
-              <Text>Our software scales seamlessly to accommodate the growth of your enterprise, ensuring uninterrupted performance.</Text>
-            </GridItem>
-            <GridItem>
-              <Icon as={FaCheck} color="green.500" boxSize={8} mb={4} />
-              <Heading as="h3" size="lg" mb={2}>
-                Security
-              </Heading>
-              <Text>We prioritize the security of your data with robust encryption, access controls, and regular security audits.</Text>
-            </GridItem>
-            <GridItem>
-              <Icon as={FaCheck} color="green.500" boxSize={8} mb={4} />
-              <Heading as="h3" size="lg" mb={2}>
-                Collaboration
-              </Heading>
-              <Text>Foster team collaboration with real-time communication, shared workspaces, and seamless file sharing.</Text>
-            </GridItem>
-          </Grid>
+          <Grid templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} gap={8}></Grid>
           <Flex justifyContent="center" mt={8}>
             <Button mr={4} colorScheme="blue" onClick={() => handleTabClick("Security")}>
               Security
