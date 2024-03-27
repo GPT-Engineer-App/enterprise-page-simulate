@@ -24,7 +24,30 @@ const Index = () => {
         </Box>
       </Box>
 
-      {/* Features Section */}
+      {}
+      <Box py={20}>
+        <Box maxW="7xl" mx="auto" px={4}>
+          <Flex alignItems="center">
+            <Box flex="1" pr={8}>
+              <Heading as="h2" size="xl" mb={4}>
+                AI-Powered Enterprise Solution
+              </Heading>
+              <Text fontSize="lg" mb={8}>
+                Leverage the power of artificial intelligence to optimize your business processes, gain valuable insights, and stay ahead of the competition. Our AI-driven enterprise solution provides intelligent automation, predictive analytics, and data-driven decision-making capabilities.
+              </Text>
+              <Button colorScheme="blue" size="lg">
+                Learn More
+              </Button>
+            </Box>
+            <Box flex="1">
+              <Image src="path/to/ai-image.jpg" alt="AI Enterprise Solution" borderRadius="lg" />
+            </Box>
+          </Flex>
+          <Box borderBottomWidth="1px" borderColor="gray.200" my={12} width="50%" mx="auto" />
+        </Box>
+      </Box>
+
+      {}
       <Box py={20}>
         <Box maxW="7xl" mx="auto" px={4}>
           <Heading as="h2" size="xl" mb={12} textAlign="center">
