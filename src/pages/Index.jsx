@@ -8,8 +8,8 @@ const Index = () => {
       {/* Hero Section */}
       <Box bg="gray.100" py={20}>
         <Box maxW="7xl" mx="auto" px={4}>
-          <Flex alignItems="center" justifyContent="space-between">
-            <Box maxW="xl">
+          <Flex alignItems="center" justifyContent="center">
+            <Box textAlign="center">
               <Heading as="h1" size="2xl" mb={4}>
                 Enterprise Software Solution
               </Heading>
@@ -20,7 +20,6 @@ const Index = () => {
                 Get Started
               </Button>
             </Box>
-            <Image src="https://images.unsplash.com/photo-1579762715118-a6f1d4b934f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxlbnRlcnByaXNlJTIwc29mdHdhcmUlMjBpbGx1c3RyYXRpb258ZW58MHx8fHwxNzExNTAxNzQ3fDA&ixlib=rb-4.0.3&q=80&w=1080" alt="Enterprise Software" />
           </Flex>
         </Box>
       </Box>
