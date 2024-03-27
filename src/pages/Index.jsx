@@ -50,6 +50,9 @@ const Index = () => {
       {}
       <Box py={20}>
         <Box maxW="7xl" mx="auto" px={4}>
+          <Text fontSize="sm" textAlign="center" mb={2}>
+            ENTERPRISE-LEVEL FEATURES
+          </Text>
           <Heading as="h2" size="xl" mb={12} textAlign="center">
             Key Features
           </Heading>
